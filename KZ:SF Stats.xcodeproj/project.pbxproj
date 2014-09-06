@@ -19,7 +19,9 @@
 		54C45E8319BA8895009B8D12 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C45E8219BA8895009B8D12 /* json.swift */; };
 		54C45E8619BB2DEF009B8D12 /* kzlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8519BB2DEF009B8D12 /* kzlogo.png */; };
 		54C45E8819BB3FE2009B8D12 /* kd.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8719BB3FE2009B8D12 /* kd.png */; };
-		54C45E8A19BB4E21009B8D12 /* overall.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8919BB4E21009B8D12 /* overall.png */; };
+		54C45E8A19BB4E21009B8D12 /* missions.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8919BB4E21009B8D12 /* missions.png */; };
+		54C45E8C19BB7285009B8D12 /* icon-iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8B19BB7285009B8D12 /* icon-iOS.png */; };
+		54C45E8E19BB78DD009B8D12 /* wl.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C45E8D19BB78DD009B8D12 /* wl.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,9 @@
 		54C45E8219BA8895009B8D12 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		54C45E8519BB2DEF009B8D12 /* kzlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kzlogo.png; sourceTree = "<group>"; };
 		54C45E8719BB3FE2009B8D12 /* kd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kd.png; sourceTree = "<group>"; };
-		54C45E8919BB4E21009B8D12 /* overall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overall.png; sourceTree = "<group>"; };
+		54C45E8919BB4E21009B8D12 /* missions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missions.png; sourceTree = "<group>"; };
+		54C45E8B19BB7285009B8D12 /* icon-iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iOS.png"; sourceTree = "<group>"; };
+		54C45E8D19BB78DD009B8D12 /* wl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wl.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,9 @@
 		54C45E8419BB2DBE009B8D12 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				54C45E8919BB4E21009B8D12 /* overall.png */,
+				54C45E8D19BB78DD009B8D12 /* wl.png */,
+				54C45E8B19BB7285009B8D12 /* icon-iOS.png */,
+				54C45E8919BB4E21009B8D12 /* missions.png */,
 				54C45E8719BB3FE2009B8D12 /* kd.png */,
 				54C45E8519BB2DEF009B8D12 /* kzlogo.png */,
 			);
@@ -222,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C45E8819BB3FE2009B8D12 /* kd.png in Resources */,
-				54C45E8A19BB4E21009B8D12 /* overall.png in Resources */,
+				54C45E8A19BB4E21009B8D12 /* missions.png in Resources */,
+				54C45E8C19BB7285009B8D12 /* icon-iOS.png in Resources */,
 				54C45E8619BB2DEF009B8D12 /* kzlogo.png in Resources */,
+				54C45E8E19BB78DD009B8D12 /* wl.png in Resources */,
 				54C45E8119BA8875009B8D12 /* data.plist in Resources */,
 				54C45E6519BA8735009B8D12 /* Main.storyboard in Resources */,
 				54C45E6719BA8735009B8D12 /* Images.xcassets in Resources */,
@@ -363,7 +371,6 @@
 		54C45E7719BA8735009B8D12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "KZ:SF Stats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,7 +381,6 @@
 		54C45E7819BA8735009B8D12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "KZ:SF Stats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
