@@ -375,6 +375,7 @@
 				INFOPLIST_FILE = "KZ:SF Stats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -385,6 +386,7 @@
 				INFOPLIST_FILE = "KZ:SF Stats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -441,6 +443,7 @@
 				54C45E7819BA8735009B8D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54C45E7919BA8735009B8D12 /* Build configuration list for PBXNativeTarget "KZ:SF StatsTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +452,7 @@
 				54C45E7B19BA8735009B8D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

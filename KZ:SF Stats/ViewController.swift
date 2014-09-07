@@ -25,11 +25,17 @@ class ViewController: UIViewController, UITextFieldDelegate
             textBox.textColor = UIColor.redColor()
             textBox.text = "Enter your Username!"
         }
+        else if(NSString(string: textBox.text).containsString(" "))
+        {
+            textBox.textColor = UIColor.redColor()
+            textBox.text = "No spaces allowed!"
+        }
         else
         {
             var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
             var path = paths.stringByAppendingPathComponent("data.plist")
             var user = textBox.text
+            
             
             NSLog("contacting: http://killzone4.online.scee.com/api/profile/get-competitive/\(user)")
             let stats = JSON.fromURL("http://killzone4.online.scee.com/api/profile/get-competitive/\(user)")
