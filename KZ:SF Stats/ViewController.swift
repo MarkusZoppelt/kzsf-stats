@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate
     let pic_logo = UIImage(named: "kzlogo.png")
     let kzlogo = UIImageView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-150, 40, 300, 75))
     let textBox = UITextField(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-125, UIScreen.mainScreen().bounds.height/2-100, 250, 50))
-    let clanBox = UITextField(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-125, UIScreen.mainScreen().bounds.height/2, 250, 50))
     
     
     let infoLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-200, UIScreen.mainScreen().bounds.height-150, 400, 150))
@@ -109,7 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         touch.numberOfTapsRequired = 1
         
         self.textBox.delegate = self;
-        self.clanBox.delegate = self;
+        textBox.keyboardAppearance = UIKeyboardAppearance.Dark
         
         
         view.backgroundColor = UIColor.blackColor()
@@ -156,11 +155,6 @@ class ViewController: UIViewController, UITextFieldDelegate
         textBox.backgroundColor = UIColor.cyanColor()
         textBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
-        clanBox.borderStyle = UITextBorderStyle.RoundedRect
-        clanBox.textAlignment = NSTextAlignment.Center
-        clanBox.backgroundColor = UIColor.cyanColor()
-//        clanBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-        
         //REMOVE THIS
         textBox.text = "MarkusTheFanatic"
         
@@ -168,8 +162,6 @@ class ViewController: UIViewController, UITextFieldDelegate
         view.addSubview(infoLabel)
         view.addSubview(button)
         view.addSubview(textBox)
-//        view.addSubview(clanButton)
-//        view.addSubview(clanBox)
         view.addGestureRecognizer(touch)
         
         
