@@ -17,57 +17,57 @@ class StatsViewController: UIViewController
     
     
     // EPIC LIST OF PICTURES
-    let iv_profile = UIImageView(frame: CGRectMake(10, 0*165+50, 150, 150))
-    let iv_tier = UIImageView(frame: CGRectMake(10, 0*165+50, 150, 150))
-    let iv_kd = UIImageView(frame: CGRectMake(20, 1*165+60, 130, 130))
-    let iv_wl = UIImageView(frame: CGRectMake(20, 2*165+60, 130, 130))
-    let iv_missions = UIImageView(frame: CGRectMake(20, 3*165+60, 130, 130))
+    let iv_profile = UIImageView(frame: CGRectMake(10, 0*165-40+50, 150, 150))
+    let iv_tier = UIImageView(frame: CGRectMake(10, 0*165-40+50, 150, 150))
+    let iv_kd = UIImageView(frame: CGRectMake(20, 1*165-40+60, 130, 130))
+    let iv_wl = UIImageView(frame: CGRectMake(20, 2*165-40+60, 130, 130))
+    let iv_missions = UIImageView(frame: CGRectMake(20, 3*165-40+60, 130, 130))
     
     
     // EPIC LIST OF GRAPHS
-    let gr_kd = UIProgressView(frame: CGRectMake(15, 1*165+190, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let gr_wl = UIProgressView(frame: CGRectMake(15, 2*165+190, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let gr_wlm = UIProgressView(frame: CGRectMake(15, 3*165+190, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let gr_kd = UIProgressView(frame: CGRectMake(15, 1*165-40+190, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let gr_wl = UIProgressView(frame: CGRectMake(15, 2*165-40+190, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let gr_wlm = UIProgressView(frame: CGRectMake(15, 3*165-40+190, UIScreen.mainScreen().bounds.width/2-30, 50))
     
     
     // EPIC LIST OF STAT-LABELS
     
-    let userLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165+40, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let userLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165-40+40, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let pointsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let challengesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let ppmLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let pointsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165-40 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let challengesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165-40 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let ppmLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 0*165-40 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let t_kdLabel = UILabel(frame: CGRectMake(10, 1*165+35, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let killLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165+100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let deathLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165+130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let kdLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165+160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let t_kdLabel = UILabel(frame: CGRectMake(10, 1*165-40+35, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let killLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165-40+100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let deathLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165-40+130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let kdLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 1*165-40+160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let t_wlLabel = UILabel(frame: CGRectMake(10, 2*165+35, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let gamesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let winssLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let lossesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let drawsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let wlLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let t_wlLabel = UILabel(frame: CGRectMake(10, 2*165-40+35, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let gamesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let winssLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let lossesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let drawsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let wlLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let t_missionLabel = UILabel(frame: CGRectMake(10, 3*165+35, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let missionsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let missionwinssLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let missionlossesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let missionwlLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let missionpointsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let t_missionLabel = UILabel(frame: CGRectMake(10, 3*165-40+35, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let missionsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165-40 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let missionwinssLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165-40 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let missionlossesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165-40 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let missionwlLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165-40 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let missionpointsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 3*165-40 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let assistsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let revivesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let meleeLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let suicideLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let cratesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let assistsLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165-40 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let revivesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165-40 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let meleeLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165-40 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let suicideLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165-40 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let cratesLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 4*165-40 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
-    let captureLabel = UILabel(frame: CGRectMake(20, 4*165 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let beaconLabel = UILabel(frame: CGRectMake(20, 4*165 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let echoLabel = UILabel(frame: CGRectMake(20, 4*165 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let chargesLabel = UILabel(frame: CGRectMake(20, 4*165 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
-    let teamkillsLabel = UILabel(frame: CGRectMake(20, 4*165 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let captureLabel = UILabel(frame: CGRectMake(20, 4*165-40 + 40, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let beaconLabel = UILabel(frame: CGRectMake(20, 4*165-40 + 70, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let echoLabel = UILabel(frame: CGRectMake(20, 4*165-40 + 100, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let chargesLabel = UILabel(frame: CGRectMake(20, 4*165-40 + 130, UIScreen.mainScreen().bounds.width/2-30, 50))
+    let teamkillsLabel = UILabel(frame: CGRectMake(20, 4*165-40 + 160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
     
     
@@ -76,7 +76,11 @@ class StatsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backSwiper = UISwipeGestureRecognizer(target: self, action: "logout:")
         view.backgroundColor = UIColor.blackColor()
+        backSwiper.direction = UISwipeGestureRecognizerDirection.Right
+        
+        view.addGestureRecognizer(backSwiper)
         
             logoutButton.frame = CGRectMake(0, 0, 75, 50)
             logoutButton.backgroundColor=UIColor.clearColor()
@@ -97,7 +101,8 @@ class StatsViewController: UIViewController
             
             for var i = 0; i < 165*5; i = i + 165
             {
-                var j = CGFloat(45+i)
+//                var j = CGFloat(45+i)
+                var j = CGFloat(5 + i)
                 
                 var grayBox = UIView(frame: CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160))
                 grayBox.backgroundColor = UIColor(red: 16.0, green: 16.0, blue: 16.0, alpha: 0.1)
@@ -295,7 +300,7 @@ class StatsViewController: UIViewController
         view.addSubview(teamkillsLabel)
         
         
-        view.addSubview(logoutButton)
+//        view.addSubview(logoutButton)
 //        view.addSubview(refreshButton)
         
         reload(refreshButton)
@@ -303,7 +308,7 @@ class StatsViewController: UIViewController
     
     }
     
-    func logout(sender: UIButton)
+    func logout(sender: UIGestureRecognizer)
     {
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
@@ -328,7 +333,7 @@ class StatsViewController: UIViewController
     override func loadView()
     {
         self.view = self.scrollView
-        self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 50+5*165)
+        self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 50+5*165-40)
         
     }
 
@@ -347,10 +352,11 @@ class StatsViewController: UIViewController
         
         if(stats["Kills"].asString == nil)
         {
-            logout(logoutButton)
+            logout(UIGestureRecognizer())
         }
         else
         {
+            userLabel.text = user
             iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardIcon"].asString!)))
             iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardTierIcon"].asString!)))
             

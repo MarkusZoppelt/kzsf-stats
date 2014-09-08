@@ -79,11 +79,20 @@ class ViewController: UIViewController, UITextFieldDelegate
         return true;
     }
     
+    func dismissKeyboard(sender: UITapGestureRecognizer)
+    {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        let touch = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+        touch.numberOfTapsRequired = 1
+        
         self.textBox.delegate = self;
+        
         
         view.backgroundColor = UIColor.blackColor()
         
@@ -129,6 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         view.addSubview(infoLabel)
         view.addSubview(button)
         view.addSubview(textBox)
+        view.addGestureRecognizer(touch)
         
         
     }
