@@ -10,12 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate
 {
-                            
+    
+    let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
     var players = [String]()
     let context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
     let pic_logo = UIImage(named: "kzlogo.png")
     let kzlogo = UIImageView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-150, 40, 300, 75))
     let textBox = UITextField(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-125, UIScreen.mainScreen().bounds.height/2-100, 250, 50))
+    let clanBox = UITextField(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-125, UIScreen.mainScreen().bounds.height/2, 250, 50))
+    
+    
     let infoLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-200, UIScreen.mainScreen().bounds.height-150, 400, 150))
     
     func getStatsButtonClicked(sender: UIButton) {
@@ -68,14 +72,27 @@ class ViewController: UIViewController, UITextFieldDelegate
         }
     }
     
-    func textFieldDidChange(sender: UITextField)
+//    override func loadView()
+//    {
+//        self.view = self.scrollView
+//        self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
+//        
+//    }
+    
+    func getClanStatsButtonClicked(sender: UIButton)
     {
-        textBox.textColor = UIColor.blackColor()
+        let csvc = ClanStatsViewController()
+        self.navigationController?.pushViewController(csvc, animated: true)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool
+    func textFieldDidChange(sender: UITextField)
     {
-        textBox.resignFirstResponder()
+        sender.textColor = UIColor.blackColor()
+    }
+    
+    func textFieldShouldReturn(sender: UITextField!) -> Bool
+    {
+        sender.resignFirstResponder()
         return true;
     }
     
@@ -92,6 +109,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         touch.numberOfTapsRequired = 1
         
         self.textBox.delegate = self;
+        self.clanBox.delegate = self;
         
         
         view.backgroundColor = UIColor.blackColor()
@@ -119,17 +137,29 @@ class ViewController: UIViewController, UITextFieldDelegate
         
         let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(UIScreen.mainScreen().bounds.width/2-50, UIScreen.mainScreen().bounds.height/2-50, 100, 50)
-        button.backgroundColor = UIColor.whiteColor()
         button.setTitle("Login", forState: UIControlState.Normal)
         button.addTarget(self, action: "getStatsButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         button.backgroundColor = UIColor.clearColor()
         button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+        
+        let clanButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        clanButton.frame = CGRectMake(UIScreen.mainScreen().bounds.width/2-50, UIScreen.mainScreen().bounds.height/2+50, 100, 50)
+        clanButton.backgroundColor = UIColor.whiteColor()
+        clanButton.setTitle("Clan Login", forState: UIControlState.Normal)
+        clanButton.addTarget(self, action: "getClanStatsButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        clanButton.backgroundColor = UIColor.clearColor()
+        clanButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
         
         
         textBox.borderStyle = UITextBorderStyle.RoundedRect
         textBox.textAlignment = NSTextAlignment.Center
         textBox.backgroundColor = UIColor.cyanColor()
         textBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        
+        clanBox.borderStyle = UITextBorderStyle.RoundedRect
+        clanBox.textAlignment = NSTextAlignment.Center
+        clanBox.backgroundColor = UIColor.cyanColor()
+//        clanBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
         //REMOVE THIS
         textBox.text = "MarkusTheFanatic"
@@ -138,6 +168,8 @@ class ViewController: UIViewController, UITextFieldDelegate
         view.addSubview(infoLabel)
         view.addSubview(button)
         view.addSubview(textBox)
+//        view.addSubview(clanButton)
+//        view.addSubview(clanBox)
         view.addGestureRecognizer(touch)
         
         

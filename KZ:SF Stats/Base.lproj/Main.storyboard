@@ -45,6 +45,24 @@
             </objects>
             <point key="canvasLocation" x="606" y="-136"/>
         </scene>
+        <!--Clan Stats View Controller-->
+        <scene sceneID="R76-P1-TEO">
+            <objects>
+                <viewController id="pcL-QJ-Klh" customClass="ClanStatsViewController" customModule="KZ_SF_Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="llf-cc-cBT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Plz-9X-ysB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Sm-Oo-Udd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5C-ZR-2rz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="502"/>
+        </scene>
         <!--Stats View Controller-->
         <scene sceneID="Ydq-jq-POo">
             <objects>
