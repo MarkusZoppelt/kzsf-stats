@@ -105,6 +105,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "KZ:SF-Stats"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

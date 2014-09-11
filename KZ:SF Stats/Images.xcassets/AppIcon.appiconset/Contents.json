@@ -3,20 +3,26 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon-iOS.png",
+      "filename" : "Icon58.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon-iOS-1.png",
+      "filename" : "Icon80.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon-iOS-2.png",
+      "filename" : "Icon120.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon180.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
