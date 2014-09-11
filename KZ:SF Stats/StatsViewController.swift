@@ -11,6 +11,8 @@ import UIKit
 class StatsViewController: UIViewController
 {
     let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+    
+    let circProg = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
 
     // EPIC LIST OF PICTURES
     let iv_profile = UIImageView(frame: CGRectMake(10, 0*165-40+50, 150, 150))
@@ -73,12 +75,20 @@ class StatsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blackColor()
+        
+        
 
         let backSwiper = UISwipeGestureRecognizer(target: self, action: "logout:")
         backSwiper.direction = UISwipeGestureRecognizerDirection.Right
         
         let forwardSwiper = UISwipeGestureRecognizer(target: self, action: "showClanInfo:")
         forwardSwiper.direction = UISwipeGestureRecognizerDirection.Left
+        
+        circProg.center = CGPointMake(UIScreen.mainScreen().bounds.width/2, UIScreen.mainScreen().bounds.height/2)
+        circProg.color = UIColor.cyanColor()
+        self.view.addSubview(circProg)
+        
+        circProg.startAnimating()
         
         view.addGestureRecognizer(backSwiper)
         view.addGestureRecognizer(forwardSwiper)
@@ -293,13 +303,16 @@ class StatsViewController: UIViewController
         view.addSubview(chargesLabel)
         view.addSubview(teamkillsLabel)
         
-        reload(tapGesture)
+//        reload(tapGesture)
         
     
     }
     
     func showClanInfo(sender: UIGestureRecognizer)
     {
+        
+        NSLog("Activity started. Loading Clan Info")
+    
         let csvc = ClanStatsViewController()
         navigationController?.pushViewController(csvc, animated: true)
     }
@@ -332,6 +345,11 @@ class StatsViewController: UIViewController
         self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 50+5*165-40)
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        reload(UITapGestureRecognizer())
+        circProg.stopAnimating()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -341,6 +359,8 @@ class StatsViewController: UIViewController
     
     func reload(sender: UIGestureRecognizer)
     {
+        circProg.startAnimating()
+        
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
         var user = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
@@ -554,22 +574,23 @@ class StatsViewController: UIViewController
             }
             teamkillsLabel.text = NSString(format: "%@ team kills", teamkills!)
             
-            
         }
         
         NSLog("Data loaded")
+        
+        circProg.stopAnimating()
 
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//    }
+//    
 
 }

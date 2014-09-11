@@ -10,9 +10,14 @@ import UIKit
 
 class NavigationController: UINavigationController {
 
+    let circProg = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        circProg.center = CGPointMake(UIScreen.mainScreen().bounds.width/2, UIScreen.mainScreen().bounds.height/2)
+        circProg.color = UIColor.whiteColor()
+        self.view.addSubview(circProg)
         
         // Do any additional setup after loading the view.
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545D7C9519BDF79F00B8D5C5 /* ClanStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */; };
+		545D7C9819BE11DE00B8D5C5 /* clan_bil.png in Resources */ = {isa = PBXBuildFile; fileRef = 545D7C9619BE11DE00B8D5C5 /* clan_bil.png */; };
+		545D7C9919BE11DE00B8D5C5 /* clan_trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 545D7C9719BE11DE00B8D5C5 /* clan_trophy.png */; };
 		54C45E5D19BA8735009B8D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C45E5C19BA8735009B8D12 /* AppDelegate.swift */; };
 		54C45E6019BA8735009B8D12 /* KZ_SF_Stats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54C45E5E19BA8735009B8D12 /* KZ_SF_Stats.xcdatamodeld */; };
 		54C45E6219BA8735009B8D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C45E6119BA8735009B8D12 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanStatsViewController.swift; sourceTree = "<group>"; };
+		545D7C9619BE11DE00B8D5C5 /* clan_bil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clan_bil.png; sourceTree = "<group>"; };
+		545D7C9719BE11DE00B8D5C5 /* clan_trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clan_trophy.png; sourceTree = "<group>"; };
 		54C45E5719BA8735009B8D12 /* KZ:SF Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KZ:SF Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C45E5B19BA8735009B8D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C45E5C19BA8735009B8D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 				54C45E8219BA8895009B8D12 /* json.swift */,
 				54C45E5C19BA8735009B8D12 /* AppDelegate.swift */,
 				54C45E6119BA8735009B8D12 /* ViewController.swift */,
+				545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */,
 				54C45E6319BA8735009B8D12 /* Main.storyboard */,
 				54C45E7E19BA884F009B8D12 /* StatsViewController.swift */,
 				54C45E8019BA8875009B8D12 /* data.plist */,
@@ -138,6 +145,8 @@
 		54C45E8419BB2DBE009B8D12 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				545D7C9619BE11DE00B8D5C5 /* clan_bil.png */,
+				545D7C9719BE11DE00B8D5C5 /* clan_trophy.png */,
 				54C45E8D19BB78DD009B8D12 /* wl.png */,
 				54C45E8B19BB7285009B8D12 /* icon-iOS.png */,
 				54C45E8919BB4E21009B8D12 /* missions.png */,
@@ -231,7 +240,9 @@
 				54C45E8819BB3FE2009B8D12 /* kd.png in Resources */,
 				54C45E8A19BB4E21009B8D12 /* missions.png in Resources */,
 				54C45E8C19BB7285009B8D12 /* icon-iOS.png in Resources */,
+				545D7C9819BE11DE00B8D5C5 /* clan_bil.png in Resources */,
 				54C45E8619BB2DEF009B8D12 /* kzlogo.png in Resources */,
+				545D7C9919BE11DE00B8D5C5 /* clan_trophy.png in Resources */,
 				54C45E8E19BB78DD009B8D12 /* wl.png in Resources */,
 				54C45E8119BA8875009B8D12 /* data.plist in Resources */,
 				54C45E6519BA8735009B8D12 /* Main.storyboard in Resources */,
@@ -258,6 +269,7 @@
 				54C45E5D19BA8735009B8D12 /* AppDelegate.swift in Sources */,
 				54C45E7F19BA884F009B8D12 /* StatsViewController.swift in Sources */,
 				54C45E6019BA8735009B8D12 /* KZ_SF_Stats.xcdatamodeld in Sources */,
+				545D7C9519BDF79F00B8D5C5 /* ClanStatsViewController.swift in Sources */,
 				54C45E8319BA8895009B8D12 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +363,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Zoppelt (GTW932R77D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Markus Zoppelt (GTW932R77D)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -378,7 +391,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,12 +399,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Zoppelt (GTW932R77D)";
 				INFOPLIST_FILE = "KZ:SF Stats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

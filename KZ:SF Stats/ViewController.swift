@@ -155,8 +155,14 @@ class ViewController: UIViewController, UITextFieldDelegate
         textBox.backgroundColor = UIColor.cyanColor()
         textBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
-        //REMOVE THIS
-        textBox.text = "MarkusTheFanatic"
+        if(user.length != 0)
+        {
+            textBox.text = user
+        }
+        else
+        {
+            textBox.text = ""
+        }
         
         view.addSubview(kzlogo)
         view.addSubview(infoLabel)

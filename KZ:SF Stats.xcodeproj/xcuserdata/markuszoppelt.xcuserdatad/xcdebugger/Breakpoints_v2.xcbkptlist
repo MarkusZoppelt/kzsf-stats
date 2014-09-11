@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KZ:SF Stats/StatsViewController.swift"
-            timestampString = "431807735.603776"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "KZ:SF Stats/ViewController.swift"
             timestampString = "431703299.348768"
             startingColumnNumber = "9223372036854775807"
@@ -71,29 +55,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KZ:SF Stats/StatsViewController.swift"
-            timestampString = "431806749.116575"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KZ:SF Stats/StatsViewController.swift"
-            timestampString = "431807735.603776"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
             endingLineNumber = "155"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "reload()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -103,12 +71,230 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KZ:SF Stats/StatsViewController.swift"
-            timestampString = "431806749.116575"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "reload()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "431885816.119725"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2652">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "431885816.119896"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "reload()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "431885816.144756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2652">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "431885816.14493"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "reload()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "reload()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "reload()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "reload()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "reload()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ClanStatsViewController.swift"
+            timestampString = "432126588.479885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "reload()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)() -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/Xcode%20Projects/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "432124101.218596"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "31176">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KZ_SF_Stats.ClanStatsViewController.reload (KZ_SF_Stats.ClanStatsViewController)() -&gt; ()"
+                  moduleName = "KZ:SF Stats"
+                  urlString = "file:///Users/markuszoppelt/Xcode%20Projects/KZ:SF%20Stats/KZ:SF%20Stats/ClanStatsViewController.swift"
+                  timestampString = "432124101.218774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "31412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KZ:SF Stats/ViewController.swift"
+            timestampString = "432127044.646552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

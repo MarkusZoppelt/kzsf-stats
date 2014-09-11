@@ -11,6 +11,9 @@ import UIKit
 class ClanStatsViewController: UIViewController {
     
     let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+    let circProg = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    
+    let loadingLabel  = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-150, UIScreen.mainScreen().bounds.height/2+30, 300, 50))
     
     let iv_trophy = UIImageView(frame: CGRectMake(20, 1*165-40+60, 130, 130))
     let iv_bil = UIImageView(frame: CGRectMake(20, 2*165-40+60, 130, 130))
@@ -37,6 +40,21 @@ class ClanStatsViewController: UIViewController {
         
         let backSwiper = UISwipeGestureRecognizer(target: self, action: "goBack:")
         backSwiper.direction = UISwipeGestureRecognizerDirection.Right
+        
+        /// Loading ---
+        
+        loadingLabel.textColor = UIColor.cyanColor()
+        loadingLabel.textAlignment = NSTextAlignment.Center
+        loadingLabel.font = UIFont(name: "Avenir Next Condensed", size: 11.0)
+        loadingLabel.text = "Loading clan info"
+        loadingLabel.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(loadingLabel)
+        
+        circProg.center = CGPointMake(UIScreen.mainScreen().bounds.width/2, UIScreen.mainScreen().bounds.height/2)
+        circProg.color = UIColor.cyanColor()
+        self.view.addSubview(circProg)
+        
+        /// Loading ---
         
         view.addGestureRecognizer(backSwiper)
         
@@ -88,13 +106,30 @@ class ClanStatsViewController: UIViewController {
         wlClanLabel.textAlignment = NSTextAlignment.Right
         wlClanLabel.font = UIFont(name: "Avenir Next Condensed", size: 15.0)
         
+        for var i = 0; i < 165*3; i = i + 165
+        {
+            //                var j = CGFloat(45+i)
+            var j = CGFloat(5 + i)
+            
+            var grayBox = UIView(frame: CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160))
+            grayBox.backgroundColor = UIColor(red: 16.0, green: 16.0, blue: 16.0, alpha: 0.1)
+            view.addSubview(grayBox)
+        }
+        
         
         view.addSubview(clanNameLabel)
         view.addSubview(clanTagLabel)
         
-        reload(UIGestureRecognizer())
-        
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        circProg.startAnimating()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        reload()
+        circProg.stopAnimating()
+        loadingLabel.text = ""
     }
     
     override func loadView()
@@ -110,7 +145,7 @@ class ClanStatsViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
 
-    func reload(sender: UIGestureRecognizer)
+    func reload()
     {
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
@@ -130,15 +165,7 @@ class ClanStatsViewController: UIViewController {
         else
         {
             
-            for var i = 0; i < 165*3; i = i + 165
-            {
-                //                var j = CGFloat(45+i)
-                var j = CGFloat(5 + i)
-                
-                var grayBox = UIView(frame: CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160))
-                grayBox.backgroundColor = UIColor(red: 16.0, green: 16.0, blue: 16.0, alpha: 0.1)
-                view.addSubview(grayBox)
-            }
+            
             
             view.addSubview(iv_bil)
             view.addSubview(iv_trophy)
@@ -154,6 +181,7 @@ class ClanStatsViewController: UIViewController {
             
             view.addSubview(gr_wlClan)
             
+            loadingLabel.text = "Fetching clan info"
             NSLog("Checking http://killzone4.online.scee.com/api/clan/get-stats/\(clanTag!)")
             let clanStats = JSON.fromURL("http://killzone4.online.scee.com/api/clan/get-stats/\(clanTag!)")
             
@@ -214,6 +242,52 @@ class ClanStatsViewController: UIViewController {
             gr_wlClan.progress = Float(NSString(string: gamesWon!).doubleValue/(NSString(string: gamesLost!).doubleValue+NSString(string: gamesWon!).doubleValue))
             
             // ---
+            
+            loadingLabel.text = "Fetching clan member"
+            self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 50+CGFloat(3+memberCount!)*165-40)
+            var i:Int = 2*165
+            
+            for member in memberArray!
+            {
+                var memberName = member["id"].asString
+                var memberRole = member["role"].asString
+                let memberInfo = JSON.fromURL("http://killzone4.online.scee.com/api/profile/get-competitive/\(memberName!)")
+                
+                var memberCardIcon = memberInfo["PlayerCardIcon"].asString
+                var memberTierIcon = memberInfo["PlayerCardTierIcon"].asString
+                
+                i = i + 165
+                var iv_profile = UIImageView(frame: CGRectMake(10, CGFloat(i)-40+50, 150, 150))
+                var iv_tier = UIImageView(frame: CGRectMake(10, CGFloat(i)-40+50, 150, 150))
+
+                iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberCardIcon!)))
+                iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberTierIcon!)))
+                view.addSubview(iv_profile)
+                view.addSubview(iv_tier)
+                
+                var j = CGFloat(5 + i)
+                var grayBox = UIView(frame: CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160))
+                grayBox.backgroundColor = UIColor(red: 16.0, green: 16.0, blue: 16.0, alpha: 0.1)
+                view.addSubview(grayBox)
+                
+                
+                var nameLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+5, CGFloat(i+27), UIScreen.mainScreen().bounds.width/2-10, 125))
+                nameLabel.text = memberName
+                nameLabel.textColor = UIColor.cyanColor()
+                nameLabel.textAlignment = NSTextAlignment.Center
+                nameLabel.font = UIFont(name: "Avenir Next Condensed", size: 22.0)
+                view.addSubview(nameLabel)
+                
+                var roleLabel = UILabel(frame: CGRectMake(25, CGFloat(i-30), UIScreen.mainScreen().bounds.width-50, 125))
+                roleLabel.text = memberRole
+                roleLabel.textColor = UIColor.orangeColor()
+                roleLabel.textAlignment = NSTextAlignment.Center
+                roleLabel.font = UIFont(name: "Avenir Next Condensed", size: 16.0)
+                view.addSubview(roleLabel)
+                
+                
+            }
+
         
         NSLog("Data loaded")
         
