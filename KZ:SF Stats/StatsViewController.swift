@@ -493,7 +493,7 @@ class StatsViewController: UIViewController
             }
             assistsLabel.text = NSString(format: "%@ assists", assists!)
             
-            var revives = stats["AbilityReviveUsed"].asString
+            var revives = stats["ReviveDrone.Revives"].asString
             if  revives == nil
             {
                 revives = "0"
