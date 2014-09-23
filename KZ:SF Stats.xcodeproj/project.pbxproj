@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544174E819D1AB3C00B34098 /* MemberStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544174E719D1AB3C00B34098 /* MemberStatsViewController.swift */; };
 		545D7C9519BDF79F00B8D5C5 /* ClanStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */; };
 		545D7C9819BE11DE00B8D5C5 /* clan_bil.png in Resources */ = {isa = PBXBuildFile; fileRef = 545D7C9619BE11DE00B8D5C5 /* clan_bil.png */; };
 		545D7C9919BE11DE00B8D5C5 /* clan_trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 545D7C9719BE11DE00B8D5C5 /* clan_trophy.png */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		544174E719D1AB3C00B34098 /* MemberStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberStatsViewController.swift; sourceTree = "<group>"; };
 		545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanStatsViewController.swift; sourceTree = "<group>"; };
 		545D7C9619BE11DE00B8D5C5 /* clan_bil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clan_bil.png; sourceTree = "<group>"; };
 		545D7C9719BE11DE00B8D5C5 /* clan_trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clan_trophy.png; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				545D7C9419BDF79F00B8D5C5 /* ClanStatsViewController.swift */,
 				54C45E6319BA8735009B8D12 /* Main.storyboard */,
 				54C45E7E19BA884F009B8D12 /* StatsViewController.swift */,
+				544174E719D1AB3C00B34098 /* MemberStatsViewController.swift */,
 				54C45E8019BA8875009B8D12 /* data.plist */,
 				54C45E7C19BA87B0009B8D12 /* NavigationController.swift */,
 				54C45E6619BA8735009B8D12 /* Images.xcassets */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544174E819D1AB3C00B34098 /* MemberStatsViewController.swift in Sources */,
 				54C45E6219BA8735009B8D12 /* ViewController.swift in Sources */,
 				54C45E7D19BA87B0009B8D12 /* NavigationController.swift in Sources */,
 				54C45E5D19BA8735009B8D12 /* AppDelegate.swift in Sources */,

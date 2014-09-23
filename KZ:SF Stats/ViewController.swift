@@ -141,15 +141,6 @@ class ViewController: UIViewController, UITextFieldDelegate
         button.backgroundColor = UIColor.clearColor()
         button.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
         
-        let clanButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        clanButton.frame = CGRectMake(UIScreen.mainScreen().bounds.width/2-50, UIScreen.mainScreen().bounds.height/2+50, 100, 50)
-        clanButton.backgroundColor = UIColor.whiteColor()
-        clanButton.setTitle("Clan Login", forState: UIControlState.Normal)
-        clanButton.addTarget(self, action: "getClanStatsButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        clanButton.backgroundColor = UIColor.clearColor()
-        clanButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
-        
-        
         textBox.borderStyle = UITextBorderStyle.RoundedRect
         textBox.textAlignment = NSTextAlignment.Center
         textBox.backgroundColor = UIColor.cyanColor()

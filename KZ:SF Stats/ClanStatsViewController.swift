@@ -10,6 +10,8 @@ import UIKit
 
 class ClanStatsViewController: UIViewController {
     
+    var firstLoad = true
+    
     let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
     let circProg = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
@@ -33,9 +35,12 @@ class ClanStatsViewController: UIViewController {
     let gamesLostLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40+130, UIScreen.mainScreen().bounds.width/2-30, 50))
     let wlClanLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+10, 2*165-40+160, UIScreen.mainScreen().bounds.width/2-30, 50))
     
+    var memberToLoad = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         view.backgroundColor = UIColor.blackColor()
         
         let backSwiper = UISwipeGestureRecognizer(target: self, action: "goBack:")
@@ -127,16 +132,21 @@ class ClanStatsViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        reload()
+        if(firstLoad)
+        {
+            reload()
+        }
+        firstLoad = false
         circProg.stopAnimating()
         loadingLabel.text = ""
+        
+        NSLog("Back again")
     }
     
     override func loadView()
     {
         self.view = self.scrollView
         self.scrollView.contentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 50+3*165-40)
-        
     }
     
     func goBack(sender: UIGestureRecognizer)
@@ -266,9 +276,18 @@ class ClanStatsViewController: UIViewController {
                 view.addSubview(iv_tier)
                 
                 var j = CGFloat(5 + i)
+                // ---
                 var grayBox = UIView(frame: CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160))
                 grayBox.backgroundColor = UIColor(red: 16.0, green: 16.0, blue: 16.0, alpha: 0.1)
                 view.addSubview(grayBox)
+                // ---
+                var memberButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+                memberButton.frame = CGRectMake(5, j, UIScreen.mainScreen().bounds.width-10, 160)
+                memberButton.setTitle(memberName, forState: UIControlState.Normal)
+                memberButton.addTarget(self, action: "viewStatsForClanMember:", forControlEvents: UIControlEvents.TouchUpInside)
+                memberButton.backgroundColor = UIColor.clearColor()
+                memberButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                view.addSubview(memberButton)
                 
                 
                 var nameLabel = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2+5, CGFloat(i+27), UIScreen.mainScreen().bounds.width/2-10, 125))
@@ -293,6 +312,16 @@ class ClanStatsViewController: UIViewController {
         
         }
     }
+    
+    func viewStatsForClanMember(sender: UIButton)
+    {
+        var name = sender.titleLabel?.text
+//        NSLog(name!)
+        let msvc = MemberStatsViewController()
+        msvc.memberName = name!
+        self.navigationController?.pushViewController(msvc, animated: true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
