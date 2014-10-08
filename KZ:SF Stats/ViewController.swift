@@ -63,6 +63,9 @@ class ViewController: UIViewController, UITextFieldDelegate
                 psnNick.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
                 NSLog("User \(psnNick) saved")
                 
+//                let whatsinTheSafe = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
+//                NSLog("Content of safe: \(whatsinTheSafe!)")
+                
                 
                 let svc = StatsViewController()
                 self.navigationController?.pushViewController(svc, animated: true)
@@ -124,9 +127,9 @@ class ViewController: UIViewController, UITextFieldDelegate
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
         
-        let user:NSString = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
+        let user = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
         
-        if (user.length != 0)
+        if (user!.length != 0)
         {
             NSLog("user found: \(user)")
             let svc = StatsViewController()
@@ -146,7 +149,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         textBox.backgroundColor = UIColor.cyanColor()
         textBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
-        if(user.length != 0)
+        if(user!.length != 0)
         {
             textBox.text = user
         }

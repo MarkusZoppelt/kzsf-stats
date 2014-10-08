@@ -160,7 +160,7 @@ class ClanStatsViewController: UIViewController {
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
         var user = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
-        let clanInfo = JSON.fromURL("http://killzone4.online.scee.com/api/clan/get-clan-for-user/\(user)")
+        let clanInfo = JSON.fromURL("http://killzone4.online.scee.com/api/clan/get-clan-for-user/\(user!)")
         
         var clanTag = clanInfo["tag"].asString
         if  clanTag == nil
@@ -270,8 +270,8 @@ class ClanStatsViewController: UIViewController {
                 var iv_profile = UIImageView(frame: CGRectMake(10, CGFloat(i)-40+50, 150, 150))
                 var iv_tier = UIImageView(frame: CGRectMake(10, CGFloat(i)-40+50, 150, 150))
 
-                iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberCardIcon!)))
-                iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberTierIcon!)))
+                iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberCardIcon!)!)!)
+                iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: memberTierIcon!)!)!)
                 view.addSubview(iv_profile)
                 view.addSubview(iv_tier)
                 

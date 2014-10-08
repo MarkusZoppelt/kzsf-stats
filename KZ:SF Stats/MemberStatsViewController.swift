@@ -363,8 +363,8 @@ class MemberStatsViewController: UIViewController {
             clanLabel.text = "[" + "\(clanTag!)" + "]"
             
             userLabel.text = memberName
-            iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardIcon"].asString!)))
-            iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardTierIcon"].asString!)))
+            iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardIcon"].asString!)!)!)
+            iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardTierIcon"].asString!)!)!)
             
             var kills = NSString(string: stats["Kills"].asString!).doubleValue
             var deaths = NSString(string: stats["Deaths"].asString!).doubleValue

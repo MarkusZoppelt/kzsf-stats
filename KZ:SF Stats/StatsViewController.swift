@@ -394,9 +394,14 @@ class StatsViewController: UIViewController
         
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = paths.stringByAppendingPathComponent("data.plist")
+
         var user = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
-        let stats = JSON.fromURL("http://killzone4.online.scee.com/api/profile/get-competitive/\(user)")
-        let clanStats = JSON.fromURL("http://killzone4.online.scee.com/api/clan/get-clan-for-user/\(user)")
+//        var user = "Mirokke"
+        
+        let stats = JSON.fromURL("http://killzone4.online.scee.com/api/profile/get-competitive/\(user!)")
+        let clanStats = JSON.fromURL("http://killzone4.online.scee.com/api/clan/get-clan-for-user/\(user!)")
+        
+        NSLog("contacting http://killzone4.online.scee.com/api/profile/get-competitive/\(user!)")
         
         if(stats["Kills"].asString == nil)
         {
@@ -413,8 +418,8 @@ class StatsViewController: UIViewController
             clanLabel.text = "[" + "\(clanTag!)" + "]"
             
             userLabel.text = user
-            iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardIcon"].asString!)))
-            iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardTierIcon"].asString!)))
+            iv_profile.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardIcon"].asString!)!)!)
+            iv_tier.image = UIImage(data: NSData(contentsOfURL: NSURL(string: stats["PlayerCardTierIcon"].asString!)!)!)
             
             var kills = NSString(string: stats["Kills"].asString!).doubleValue
             var deaths = NSString(string: stats["Deaths"].asString!).doubleValue
